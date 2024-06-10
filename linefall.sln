@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 5.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "linefall", "linefall.csproj", "{CA6A79E7-7B5E-495D-91A9-6FE2C231DEA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA6A79E7-7B5E-495D-91A9-6FE2C231DEA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6A79E7-7B5E-495D-91A9-6FE2C231DEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6A79E7-7B5E-495D-91A9-6FE2C231DEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6A79E7-7B5E-495D-91A9-6FE2C231DEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
