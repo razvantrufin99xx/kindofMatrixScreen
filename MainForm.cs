@@ -42,6 +42,7 @@ namespace linefall
 		
 		public Pen p = new Pen(Color.FromArgb(5,255,255,255),1);
 		public Brush b = new SolidBrush(Color.Black);
+		public Brush b2 = new SolidBrush(Color.DarkGray);
 		public double rad = 180/Math.PI;
 		public char[] c = {'X','D','W','Y','U','H','J','K','K','Q','S','Z','U','P','M','N','B','A','C','V','F','G','H','T','R','E','W','X','D','W','Y','U','H','J','K','K','Q','S','Z','U','P','M','N','B','A','C','V','F','G','H','T','R','E','W'};
 		public int lastm = 0;
@@ -66,27 +67,51 @@ namespace linefall
 			}
 		
 		}
+		public void DESENEAZALINE(int m, int start, int end)
+		{
+			
+			int j = start+1;
+			char d =' ';
+			for(int i = mainline;i<mainline+1;i++)
+			{
+				d = (char)r.Next(1,256);
+				j++;
+				//g.DrawString(c[i].ToString(),panel1.Font,b2,m,mainline*15);
+				
+				//p = new Pen(Color.FromArgb(5,r.Next(1,256),r.Next(1,256),r.Next(1,256)),15);
+				//g.DrawLine(p,m,(j)*11,m,lastm);
+				g.DrawString(d.ToString(),panel1.Font,b2,m,mainline*15);
+				
+				
+				           lastm = m;
+				//Thread.Sleep(1);
+			}
+		
+		}
 		Random r = new Random();
+		public int mainline = 1;
 		void Button1Click(object sender, EventArgs e)
 		{
 			g.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceOver;
-			for(int lml = 0 ; lml<5;lml++){
+			for(int lml = 0 ; lml<50;lml++){
 						
 						//g.Clear(Color.Black);
 						
 						int pas = 0;
 						int pas2 = 0;
-						
+						mainline++;
 						for(int i = 0 ; i< c.Length; i++)
 						{
 							pas =  r.Next(0,c.Length);
 							pas2 = pas +r.Next(0,c.Length);
 							if(pas2>c.Length){pas2=c.Length;}
-							DESENEAZA(i*20,pas,pas2);
-							Thread.Sleep(1);
+							//DESENEAZA(i*20,pas,pas2);
+							DESENEAZALINE(i*20,pas,pas2);
+							//Thread.Sleep(1);
 						}
 			Thread.Sleep(1);
 			}
+			mainline=0;
 		}
 	}
 }
